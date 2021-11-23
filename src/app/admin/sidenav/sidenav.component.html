@@ -1,0 +1,36 @@
+<mat-sidenav-container >
+    <mat-sidenav class="container" #sidenav mode="side" opened="true" style="position: fixed;">
+      <mat-nav-list>
+  
+        <mat-list-item style="margin-top: 20%; margin-bottom:20%;">
+          <img src="../../../assets/logotun.png" width="100%">
+        </mat-list-item>
+        <mat-list-item >
+            <div class="col-md-12 text-center">
+                <button type="button" class="btn btn-outline-warning" >SIGN OUT</button>
+
+            </div>
+          </mat-list-item>
+          
+  
+       <mat-list-item class="item-link" [routerLink]="'membre'">
+        <img src="../../../assets/group.png" height="50%">
+      
+     <span class="margin" *ngIf="isExpanded">Membre</span>
+   </mat-list-item>
+ 
+
+
+
+        
+        
+  
+      </mat-nav-list>
+    </mat-sidenav>
+  
+    <div class="content">
+    
+      <router-outlet></router-outlet>
+    </div>
+  
+</mat-sidenav-container>
